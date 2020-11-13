@@ -1,0 +1,97 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color:white;
+    margin: 0;
+}
+
+h1 {
+    color: #FFFF;
+}
+
+h2 {
+    color: #FFFF;
+    font-size: 18px;
+}
+
+span {
+    color: #FFFF;
+}
+
+input {
+    height: 1.6em;
+    margin-top: 0.6em;
+    margin-bottom: 1.2em;
+    border-radius: 6px;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.section-navbar {
+    display: flex;
+    background-color: #24292E;
+    height: 3.7em;
+}
+
+.section-main {
+    display: flex;
+    
+    justify-content: center;
+}
+
+.container-main {
+    display: inline-block;
+    justify-content: center;
+    border-radius: 0.5em;
+    align-items: center;
+    width: 60em;
+    padding: 2em;
+    padding-bottom: 3em;
+    margin-top: 2em;
+    margin-bottom: 6em;
+    background-color: #24292E;
+}
+
+.container-title {
+    display: flex;
+    justify-content: center;
+}
+
+#submit-btn {
+    margin-left: auto;
+
+    width: 100%;
+    height: 2em;
+    padding: 0.2em 0.4em;
+    margin-top: 2em;
+    box-sizing: border-box;
+    background-color: #FFFF;
+    color: #24292E;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.9em;
+    border: none;
+}
+
+#submit-btn:hover {
+    background-image: linear-gradient(to right, #24292E,#FFFF);
+}
+
+#brand {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    margin-left: 0.8em;
+}
+
+#about {
+    font-size: 1em;
+    margin-top: 0.5em;
+    margin-left: auto;
+    margin-right: 1.5em;
+    margin-top: 1.2em;
+}

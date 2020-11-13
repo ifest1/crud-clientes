@@ -1,0 +1,77 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="../global_styles.css">
+
+</head>
+
+<body>
+    <script src="register.js"></script>
+    <section class="section-navbar">
+        <span id="brand">Loja Maria Bonita</span>
+        <span id="about">Sobre</span>
+    </section>
+
+    <section class="section-main">
+        <div class="container-main">
+            <div class="container-title">
+                <h1>Cadastro de cliente</h1>
+            </div>  
+            <form>
+                <div id="container-personal">
+                    <h2>Dados cadastrais</h2>
+                    <div id="container-name">
+                        <div class="container-label">
+                            <span>Primeiro nome</span>
+                            <input class="common-input" type="text" id="fname">
+                        </div>
+                        <div class="container-label">
+                            <span>Segundo nome</span>
+                            <input class="common-input" type="text" id="lname">
+                        </div>
+                    </div>
+                    <span>E-mail</span>
+                    <div id="container-email">
+                        <input class="common-input" type="email" id="email">
+                    </div>
+                    <div id="container-birthsex">
+                        <div class="container-label">
+                           <span>Data de nascimento</span>
+                            <input type="date"> 
+                        </div>
+                        <form action="">
+                            <input type="radio" id="male" name="gender" value="male"> <span>Homem</span>
+                            <input type="radio" id="female" name="gender" value="female"> <span>Mulher</span>
+                        </form>
+                    </div>
+                </div>
+                <div id="container-residential">
+                    <h2>Dados residenciais</h2>
+                    <div id="container-cepstate">
+                        <div class="container-label">
+                            <span>CEP</span>
+                            <input type="text" id="cep">
+                        </div>
+                        <div class="container-label">
+                            <span>Estado</span>
+                            <input type="text" id="state">
+                        </div>
+                    </div>
+                    <span>Bairro</span>
+                    <input type="text" id="neighborhood">
+                </div>
+                <div id="container-btn">
+                    <button id="submit-btn" type="submit" value="Submit">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+</section>
+
+</body>
+</html>
