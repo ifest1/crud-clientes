@@ -42,10 +42,7 @@
     flex-grow: 1;
 }
 
-#email {
-    width: 99.55%;
+#email, #neighborhood, #birth {
+    width: 99%;
 }
 
-#neighborhood {
-    width: 99.55%;
-}

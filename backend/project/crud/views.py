@@ -10,19 +10,17 @@ class ClientViewSet(viewsets.ModelViewSet):
 
     def create(self, request):
         Client.objects.create(**request.data)
-        return Response({'status': 'criado'})
+        return Response({'status': 'Criado novo cliente'})
 
     def retrieve(self, request, pk=None):
         client = Client.objects.get(id=pk)
         client = ClientSerializer(client).data
         return Response(client)
 
-    def update(self, request, pk=None):
-        return Response({'status': 'atualizado'})
-
     def partial_update(self, request, pk=None):
-        return Response({'status': 'atualizado partial'})
+        Client.objects.filter(id=pk).update(**request.data)
+        return Response({'status': 'Dados do cliente atualizados com sucesso.'})
 
     def destroy(self, request, pk=None):
         Client.objects.filter(id=pk).delete()
-        return Response({'status': 'deletado'})
+        return Response({'status': 'Cliente deletado com sucesso.'})

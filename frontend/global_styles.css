@@ -24,12 +24,23 @@ input {
     height: 1.6em;
     margin-top: 0.6em;
     margin-bottom: 1.2em;
-    border-radius: 6px;
     border: none;
+    font-family: inherit;
+    width: 98%;
+    border: 0;
+    border-bottom: 1px solid #FFFF;
+    outline: 0;
+    font-size: 1.1rem;
+    color: #D3D3D3;
+    background: transparent;
+    transition: border-color 0.2s;
 }
 
+
 input:focus {
-    outline: none;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #24292E,#FFFF);
+    border-image-slice: 1;
 }
 
 .section-navbar {
