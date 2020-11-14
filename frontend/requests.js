@@ -31,7 +31,6 @@ function postClient(data, callback) {
 
 }
 
-
 // fetch all clients data
 function fetchAllClients(callback) {
     Http.open("GET", API_URL);
