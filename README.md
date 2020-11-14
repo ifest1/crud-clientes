@@ -8,7 +8,8 @@
 | Django | 
 | Javascript (ES6) | 
 | PostgreSQL | 
-| PGAdmin-4 | 
+| PGAdmin-4 |
+| Postman |
 
 ### Endpoints da API
 | Endpoint | HTTP Method | Resultado |
