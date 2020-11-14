@@ -1,15 +1,50 @@
 .container-credentials {
     border-radius: 5px;
-    border: 1px solid #FFFF;
-    margin-left: 0.8em;
     padding: 0.8em;
 }
 
+.container-list {
+    display: flex;
+    margin-left: auto;
+}
+
+.container-btns {
+    margin-left: auto;
+    display: flex;
+}
+
+.container-data {
+    display: flex;
+}
+
 .data {
-    display: block;
     font-size: 0.8em;
+    margin-left: auto;
+}
+
+.key {
+    font-size: 0.8em;
+}
+
+.common-btn {
+    width: 100px;
+    height: 2em;
+    margin-top: 1.2em;
+    margin-left: 0.6em;
+    box-sizing: border-box;
+    background-color: #FFFF;
+    color: #24292E;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.9em;
+    border: none;
+}
+
+.common-btn:hover {
+    background-image: linear-gradient(to right, #24292E,#FFFF);
 }
 
 #name {
     padding-left: 0.8em;
 }
+

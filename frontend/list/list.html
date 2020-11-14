@@ -18,18 +18,39 @@
             <span class="nav-item">Cadastrar cliente</span>
         </div>
     </section>
-    <button onclick="list()">teste</button>
     <section class="section-main">
         <ul id="client-list">
             <li>
             <div class="container-main">
-                <h2 id="name">Iago Filipe</h2>
-
+                <div class="container-list">
+                    <h2 id="name">Iago Filipe</h2>
+                    <div class="container-btns">
+                        <button class="common-btn">Atualizar</button>
+                        <button class="common-btn">Deletar</button>
+                    </div>
+                </div>
+                <hr>
                 <div class="container-credentials">
-                    <span class="data">Endereço: Rua Equador, 279</span>
-                    <span class="data">CEP: 53429-620</span>
-                    <span class="data">Cidade: Paulista</span>
-                    <span class="data">Bairro: Pau Amarelo</span>
+                    <div class="container-data">
+                        <span class="key">Endereço</span>
+                        <span contentEditable="true" class="data">Rua Equador, 279</span>
+                    </div>
+                    <div class="container-data">
+                        <span class="key">Data de nascimento</span>
+                        <span contentEditable="true" class="data">05/03/2000</span>
+                    </div>
+                    <div class="container-data">
+                        <span class="key">CEP</span>
+                        <span contentEditable="true" class="data">532429620</span>
+                    </div>
+                    <div class="container-data">
+                        <span class="key">Email</span>
+                        <span contentEditable="true" class="data">hiagoestrelas@gmail.com</span>
+                    </div>
+                    <div class="container-data">
+                        <span class="key">Estado</span>
+                        <span contentEditable="true" class="data">PE</span>
+                    </div>
                 </div>
             </div>
             </li>
