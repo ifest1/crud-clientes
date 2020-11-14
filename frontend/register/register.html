@@ -25,20 +25,13 @@
             <div class="container-title">
                 <h1>Cadastro de cliente</h1>
             </div>  
-            <form>
+            <form id="signup">
                 <div id="container-personal">
                     <h2>Dados cadastrais</h2>
-                    <div id="container-name">
-                        <div class="container-label">
-                            <span>Primeiro nome</span>
-                            <input class="common-input" type="text" id="fname">
-                        </div>
-                        <div class="container-label">
-                            <span>Segundo nome</span>
-                            <input class="common-input" type="text" id="lname">
-                        </div>
-
-                    </div>
+                    <span>Nome completo</span>
+                    <input class="common-input" type="text" id="name">
+                    <span>Número</span>
+                    <input class="common-input" type="text" id="phone">
                     <span>E-mail</span>
                     <div id="container-email">
                         <input class="common-input" type="email" id="email">
@@ -58,19 +51,25 @@
                             <input type="text" id="cep">
                         </div>
                         <div class="container-label">
-                            <span>Estado</span>
-                            <input type="text" id="state">
+                            <span>Bairro</span>
+                            <input type="text" id="neighborhood">
                         </div>
                     </div>
-                    <span>Bairro</span>
-                    <input type="text" id="neighborhood">
-                </div>
-                <div id="container-btn">
-                    <button id="submit-btn" type="submit" value="Submit">Cadastrar</button>
+                    <div class="container-label">
+                        <span>Endereço</span>
+                        <input type="text" id="address">  
+                    </div>
+                    <span>Ponto de referência</span>
+                    <input type="text" id="reference_point">
                 </div>
             </form>
+            <div id="container-btn">
+                <button id="submit-btn" onclick="submitData()">Cadastrar</button>
+            </div>
         </div>
 </section>
-
+<div class="footer">
+    <p>Criado por Iago Filipe</p>
+</div>
 </body>
 </html>

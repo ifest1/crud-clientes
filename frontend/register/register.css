@@ -42,7 +42,7 @@
     flex-grow: 1;
 }
 
-#email, #neighborhood, #birth {
+#email, #neighborhood, #birth, #reference-point, #name {
     width: 99%;
 }
 

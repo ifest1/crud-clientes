@@ -1,0 +1,15 @@
+.container-credentials {
+    border-radius: 5px;
+    border: 1px solid #FFFF;
+    margin-left: 0.8em;
+    padding: 0.8em;
+}
+
+.data {
+    display: block;
+    font-size: 0.8em;
+}
+
+#name {
+    padding-left: 0.8em;
+}
