@@ -1,4 +1,6 @@
 # Crud Clientes
+### Descrição
+Projeto de CRUD de clientes de uma loja fictícia (Maria Bonita) em Django.
 
 ### Tecnologias utilizadas
 | Tecnologias |
