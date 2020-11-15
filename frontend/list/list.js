@@ -1,52 +1,44 @@
-function list() {
+window.onload = () => {
+    listClients();
+}
+
+function listClients() {
     fetchAllClients((data) => {
         var data = JSON.parse(data);
+        var ul = document.getElementById('client-list');
         data.forEach(function(item) {
-            // elements
-            var li = document.createElement("li");
-            var nameElement = document.createElement('h2');
-            var phoneElement = document.createElement('span');
-            var emailElement = document.createElement('span');
-            var addressElement = document.createElement('span');
-            var cepElement = document.createElement('span');
-            var neighborhoodElement = document.createElement('span');
-            var birthElement = document.createElement('span');
-            var referenceElement = document.createElement('span');
-            
-            // labels
-            var name = document.createTextNode(item.name);
-            var phone = document.createTextNode(item.phone);
-            var email = document.createTextNode(item.email);
-            var address = document.createTextNode(item.address);
-            var neighborhood = document.createTextNode(item.neighborhood);
-            var cep = document.createTextNode(item.cep);
-            var birth = document.createTextNode(item.birth);
-            var reference_point = document.createTextNode(item.reference_point);
-
-            // set the li id to the client id 
-            li.id = item.id
-            
-            // append the data to the elements
-            nameElement.appendChild(name);
-            phoneElement.appendChild(phone);
-            emailElement.appendChild(email);
-            addressElement.appendChild(address);
-            cepElement.appendChild(cep);
-            neighborhoodElement.appendChild(neighborhood);
-            birthElement.appendChild(birth);
-            referenceElement.appendChild(reference_point);
-
-            // append the elements to the li
-            li.appendChild(nameElement);
-            li.appendChild(phoneElement);
-            li.appendChild(emailElement);
-            li.appendChild(addressElement);
-            li.appendChild(cepElement);
-            li.appendChild(neighborhoodElement);
-            li.appendChild(birthElement);
-            li.appendChild(referenceElement);
-
-            document.getElementById("client-list").appendChild(li);
+            var node = buildListElement(item);
+            ul.appendChild(node);
           });
     });
+}
+
+function deleteClientById(id) {
+    var listElement = document.getElementById('element' + id);
+    listElement.remove();
+    deleteClient(id, () => {});
+}
+
+
+function buildListElement(item) {
+    var node = document.createElement('li');
+    node.innerHTML += '<div id="'+ 'element' + item.id +'"class="container-main">\
+    <div class="container-list"><h2 id="name">'+ item.name +'</h2>\
+    <div class="container-btns"><button class="common-btn">Atualizar</button>\
+    <button onclick="deleteClientById(this.id)" id="'+ item.id +'"class="common-btn">Deletar</button></div></div>\
+    <div class="container-credentials">\
+    <span class="key">Cidade</span>\
+    <input class="data" value="'+ item.city +'">\
+    <span class="key">Endereço</span>\
+    <input class="data" value="'+ item.address +'">\
+    <span class="key">Bairro</span>\
+    <input class="data" value="'+ item.neighborhood + '">\
+    <span class="key">CEP</span>\
+    <input class="data" value="'+ item.cep +'">\
+    <span class="key">Email</span>\
+    <input class="data" value="'+ item.email +'">\
+    <span class="key">Estado</span>\
+    <input class="data" value="'+ item.state +'">\
+    </div></div>';
+    return node;
 }

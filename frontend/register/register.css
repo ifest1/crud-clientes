@@ -35,7 +35,22 @@
     flex-grow: 1;
 }
 
-#email, #neighborhood, #birth, #reference-point, #name {
-    width: 99%;
+#birth {
+    width: 99.55%;
 }
 
+#cep {
+    width: 90%;
+}
+
+#address {
+    width: 98.50%;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+::-webkit-calendar-picker-indicator:focus {
+    outline: none;
+}
