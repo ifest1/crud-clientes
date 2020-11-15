@@ -34,7 +34,8 @@
 POST/GET clients/ (o get retorna um array contendo todos os objetos no formato abaixo) e PATCH clients/id
 (endpoint de atualização de dados).
 
-```{
+```
+{
     "name": "Iago Filipe",
     "phone": "81986949918",
     "birth": "2000-03-05",
