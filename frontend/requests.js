@@ -12,8 +12,8 @@ function fetchResidentialData(cep, callback) {
 
 // post a new client
 function postClient(data, callback) {
-    Http.open("POST", API_URL, true);
     var data = JSON.stringify(data);
+    Http.open("POST", API_URL, true);
     Http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     Http.send(data);
     executeCallback(Http, callback);
@@ -39,6 +39,15 @@ function deleteClient(id, callback) {
     var url = API_URL + id + '/';
     Http.open("DELETE", url);
     Http.send();
+    executeCallback(Http, callback);
+}
+
+function updateClient(id, data, callback) {
+    var url = API_URL + id + '/';
+    var data = JSON.stringify(data);
+    Http.open("PATCH", url);
+    Http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    Http.send(data);
     executeCallback(Http, callback);
 }
 
